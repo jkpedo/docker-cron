@@ -7,6 +7,7 @@ RUN apt-get update \
     && which cron \
     && rm -rf /etc/cron.*/*
 
+COPY crontab /etc/crontab
 COPY entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
