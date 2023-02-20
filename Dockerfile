@@ -10,6 +10,8 @@ RUN apt-get update \
 COPY crontab /etc/crontab
 COPY entrypoint.sh /entrypoint.sh
 
+RUN chmod +x entrypoint.sh
+
 ENTRYPOINT ["/entrypoint.sh"]
 
 # https://manpages.ubuntu.com/manpages/trusty/man8/cron.8.html
